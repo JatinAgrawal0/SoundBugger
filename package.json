@@ -1,0 +1,90 @@
+{
+  "name": "error-sound-player",
+  "displayName": "Error Sound Player",
+  "description": "Play customizable audio alerts when compiler errors are detected. Get instant audio feedback for faster debugging.",
+  "version": "0.0.1",
+  "publisher": "your-publisher-name",
+  "author": {
+    "name": "Your Name"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JatinAgrawal0/SoundBugger"
+  },
+  "bugs": {
+    "url": "https://github.com/JatinAgrawal0/SoundBugger/issues"
+  },
+  "homepage": "https://github.com/JatinAgrawal0/SoundBugger#readme",
+  "keywords": [
+    "error",
+    "sound",
+    "alert",
+    "audio",
+    "compiler",
+    "debugging",
+    "notification",
+    "feedback"
+  ],
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "errorSoundPlayer.toggle",
+        "title": "Toggle Error Sounds",
+        "category": "Error Sound Player"
+      },
+      {
+        "command": "errorSoundPlayer.test",
+        "title": "Test Error Sound",
+        "category": "Error Sound Player"
+      }
+    ],
+    "configuration": {
+      "title": "Error Sound Player",
+      "properties": {
+        "errorSoundPlayer.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable/disable error sounds"
+        },
+        "errorSoundPlayer.volume": {
+          "type": "number",
+          "default": 0.5,
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Volume level for error sounds"
+        },
+        "errorSoundPlayer.soundDelay": {
+          "type": "number",
+          "default": 500,
+          "description": "Delay between sounds in milliseconds"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "16.x",
+    "@types/vscode": "^1.74.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "node-wav-player": "^1.0.0",
+    "play-sound": "^1.1.6"
+  }
+}
+
