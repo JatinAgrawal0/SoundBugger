@@ -3,9 +3,9 @@
   "displayName": "Error Sound Player",
   "description": "Play customizable audio alerts when compiler errors are detected. Get instant audio feedback for faster debugging.",
   "version": "0.0.1",
-  "publisher": "your-publisher-name",
+  "publisher": "JatinAgrawal",
   "author": {
-    "name": "Your Name"
+    "name": "Jatin Agrawal"
   },
   "license": "MIT",
   "repository": {
